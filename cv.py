@@ -37,6 +37,14 @@ def index():
                            content_main_top_first_body_list = jsondata["CONTENT"]["main"]["top_first"]["body"],
                            content_main_mid_first_topic = jsondata["CONTENT"]["main"]["mid_first"]["topic"],
                            content_main_mid_first_body_list = jsondata["CONTENT"]["main"]["mid_first"]["body"],
+                           content_main_mid_last_topic = jsondata["CONTENT"]["main"]["mid_last"]["topic"],
+                           content_main_mid_last_paragraph_top= jsondata["CONTENT"]["main"]["mid_last"]["paragraph_top"],
+                           content_main_mid_last_paragraph_left = jsondata["CONTENT"]["main"]["mid_last"]["paragraph_left"],
+                           content_main_mid_last_points_right = jsondata["CONTENT"]["main"]["mid_last"]["points_right"],
+                           content_main_last_topic = jsondata["CONTENT"]["main"]["last"]["topic"],
+                           content_main_last_paragraphs = jsondata["CONTENT"]["main"]["last"]["paragraphs"],
+                           content_main_last_unordered_list = jsondata["CONTENT"]["main"]["last"]["unordered_list"],
+                           content_footer = jsondata["CONTENT"]["footer"]
                            )
 
 

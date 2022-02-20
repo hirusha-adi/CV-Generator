@@ -59,8 +59,45 @@
                 "body": [
                     "Until now, in my life, I change from active moments with a lot of variety, challenges and improvisations, to moments of tranquility and stability, being difficult to stay in a place during a long time. I consider myself a tolerant and respectful person with open mind and quite honest. I really like to listen people stories and backgrounds and their different experiences around the world."
                 ]
+            },
+
+            "mid_last": {
+                "topic": "Philosophy",
+                "paragraph_top": [
+                    "I belive in ethic and moral not in imposed rules that you 'have to' do or follow."
+                ],
+                "paragraph_left": [
+                    "I believe life is made from different shades of grey, not from black and white. Furthermore, as a human being with rationality, I think it is our duty to take care of the world and treat others as one would like others to treat oneself. This way of perceiving reality affects my beliefs and my way of behaving. Summarizing on several points:"
+                ],
+                "points_right": [
+                    "Pragmatic",
+                    "Honest",
+                    "Respectful",
+                    "Open-minded",
+                    "Coherent"
+                ]
+            },
+
+            "last": {
+                "topic": "Interests & Hobbies",
+                "paragraphs": [
+                    "I'm passionate about technology and human behavior, both determine almost all my interests and hobbies:"
+                ],
+                "unordered_list": [
+                    "Visiting new places",
+                    "Meeting people",
+                    "Meeting people",
+                    "Meeting people",
+                    "Meeting people",
+                    "Meeting people",
+                    "Meeting people"
+                ]
             }
-        }
+        },
+
+        "footer": [
+            "Javier Latorre CV 2015"
+        ]
 
 
     }
