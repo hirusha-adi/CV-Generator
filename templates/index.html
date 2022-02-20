@@ -1,185 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ document_title }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
-    <link href='{{ url_for("static", filename="custom.css") }}' rel='stylesheet' type='text/css'>
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ document_title }}</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet'
+    type='text/css'>
+  <link href='{{ url_for("static", filename="custom.css") }}' rel='stylesheet' type='text/css'>
+</head>
+
 <body>
 
-		<div id="main_container">
-      <div id="header">
+  <div id="main_container">
+    <div id="header">
 
-        <div class="header_logotype_container">
-          <h1 class="logotype_name">
-            {{ content_title_first_name }} 
-            <span class="purple">
-              {{ content_title_last_name }}
-            </span>
-          </h1>
-          <h2 class="logotype_occupation">{{ content_title_subtopic }}</h2>
-        </div>
-
-        <div class="header_menu_container">
-          <ul class="download_print_buttons horizontal_list">
-            <li onclick="window.print();"><a href="#"><span class="icon entypo-print"></span>Print/Download CV</a></li>
-          </ul>
-          
-          <div class="clear"></div>
-            <ul class="header_menu horizontal_list">
-              <li>
-                <a class="no_border purple" href="#">
-                  Profile
-                </a>
-              </li>
-              
-              {% for k1, v1 in content_topics_dict_list.items() %}
-              <li>
-                <a href="{{ v1 }}">
-                  {{ k1 }}
-                </a>
-              </li>
-              {% endfor %}
-
-            </ul>
-          </div>
+      <div class="header_logotype_container">
+        <h1 class="logotype_name">
+          {{ content_title_first_name }}
+          <span class="purple">
+            {{ content_title_last_name }}
+          </span>
+        </h1>
+        <h2 class="logotype_occupation">{{ content_title_subtopic }}</h2>
       </div>
 
-      <div id="left_col">
-        <div class="profile_frame">
-            <div class="profile_picture" 
-                style="background: url({{content_left_side_face_image}}) 100% /210px no-repeat;">
-            </div>
-        </div>
+      <div class="header_menu_container">
+        <ul class="download_print_buttons horizontal_list">
+          <li onclick="window.print();"><a href="#"><span class="icon entypo-print"></span>Print/Download CV</a></li>
+        </ul>
 
-        <div class="hello_content">
-          <h2>{{ content_left_side_start }}</h2>
-          <p>{{ content_left_side_subtopic }}</p>
-        </div>
+        <div class="clear"></div>
+        <ul class="header_menu horizontal_list">
+          <li>
+            <a class="no_border purple" href="#">
+              Profile
+            </a>
+          </li>
 
-        <div class="contact_details_content">
-          <h2>{{ content_left_side_contact_details_topic }}</h2>
-
-          {% for k2, v2 in content_left_side_contact_details_fields_dict_list.items() %}
-            {% if k2 == "Address:" %}
-              <p class="purple">{{ k2 }}</p>
-              {% for oneline in v2.split("\n") %}
-                <p>{{ oneline }}</p>
-              {% endfor %}
-            {% else %}
-              <p class="purple">{{ k2 }}</p>
-              <p>{{ v2 }}</p>
-            {% endif %}
+          {% for k1, v1 in content_topics_dict_list.items() %}
+          <li>
+            <a href="{{ v1 }}">
+              {{ k1 }}
+            </a>
+          </li>
           {% endfor %}
-        </div>
 
-        {% if content_left_side_email_button_show == True %}
-        <a href="mailto:{{ content_left_side_email_button_email }}" class="send_message_button">
-          <span class="cut1"></span>
-          <span class="cut2"></span>
-          <span class="content">{{ content_left_side_email_button_button_text }} <span class="fontawesome-double-angle-right"></span></span>
-        </a>
+        </ul>
+      </div>
+    </div>
+
+    <div id="left_col">
+      <div class="profile_frame">
+        <div class="profile_picture" style="background: url({{content_left_side_face_image}}) 100% /210px no-repeat;">
+        </div>
+      </div>
+
+      <div class="hello_content">
+        <h2>{{ content_left_side_start }}</h2>
+        <p>{{ content_left_side_subtopic }}</p>
+      </div>
+
+      <div class="contact_details_content">
+        <h2>{{ content_left_side_contact_details_topic }}</h2>
+
+        {% for k2, v2 in content_left_side_contact_details_fields_dict_list.items() %}
+        {% if k2 == "Address:" %}
+        <p class="purple">{{ k2 }}</p>
+        {% for oneline in v2.split("\n") %}
+        <p>{{ oneline }}</p>
+        {% endfor %}
+        {% else %}
+        <p class="purple">{{ k2 }}</p>
+        <p>{{ v2 }}</p>
         {% endif %}
-
-        <div class="get_social_content">
-          <h2>{{ content_left_side_social_title }}</h2>
-          <ul class="social_icons horizontal_list">
-            {% for fblink in content_left_side_social_facebook %}
-              <li><a class="facebook" href="{{ fblink }}"><span class="entypo-facebook-circled"></span><span class="invisible">Facebook</span></a></li>
-            {% endfor %}
-            
-            {% for twitterlink in content_left_side_social_twitter %}
-              <li><a class="twitter" href="{{ twitterlink }}"><span class="entypo-twitter-circled"></span><span class="invisible">Twitter</span></a></li>
-            {% endfor %}
-
-            {% for linkedinlink in content_left_side_social_linkedin %}
-              <li><a class="linkedin" href="{{ linkedinlink }}"><span class="entypo-linkedin-circled"></span><span class="invisible">LinkedIn</span></a></li>
-            {% endfor %}
-          </ul>
-        </div>
-
+        {% endfor %}
       </div>
-      <!-- PROFILE CONTENT -->
-      <div id="content_container">
 
-        <div class="block">
-          <h1>{{ content_main_top_first_topic }}</h1>
-          <blockquote class="profile_quote">
-            {% for profilebody_item in  content_main_top_first_body_list %}
-              <p style="color: black;">"There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."</p>
-            {% endfor %}
-            <span class="entypo-quote"></span>
-          </blockquote>
-        </div>
+      {% if content_left_side_email_button_show == True %}
+      <a href="mailto:{{ content_left_side_email_button_email }}" class="send_message_button">
+        <span class="cut1"></span>
+        <span class="cut2"></span>
+        <span class="content">{{ content_left_side_email_button_button_text }} <span
+            class="fontawesome-double-angle-right"></span></span>
+      </a>
+      {% endif %}
 
-        <div class="block">
-          <h2>{{ content_main_mid_first_topic }}</h2>
-          {% for profilebody_mid_item in  content_main_mid_first_body_list %}
-            <p>{{ profilebody_mid_item }}</p>				
+      <div class="get_social_content">
+        <h2>{{ content_left_side_social_title }}</h2>
+        <ul class="social_icons horizontal_list">
+          {% for fblink in content_left_side_social_facebook %}
+          <li><a class="facebook" href="{{ fblink }}"><span class="entypo-facebook-circled"></span><span
+                class="invisible">Facebook</span></a></li>
           {% endfor %}
-          </div>
 
-        <div class="horizontal_line">
-          <div class="line_left"></div>
-          <div class="left_circle"></div>
-          <div class="central_circle"></div>
-          <div class="right_circle"></div>
-          <div class="line_right"></div>
-        </div>
-
-        <div class="block">
-
-          <h2>{{ content_main_mid_last_topic }}</h2>
-          {% for item2 in content_main_mid_last_paragraph_top %}
-            <p>{{ item2 }}</p>
+          {% for twitterlink in content_left_side_social_twitter %}
+          <li><a class="twitter" href="{{ twitterlink }}"><span class="entypo-twitter-circled"></span><span
+                class="invisible">Twitter</span></a></li>
           {% endfor %}
-          
-          <div class="philosophy_content">
-            {% for item3 in content_main_mid_last_paragraph_left %}
-              <p>{{ item3 }}</p>
-            {% endfor %}
-            <ul>
-              {% for item3 in content_main_mid_last_points_right %}
-                <li>{{ item3 }}</li>
-              {% endfor %}
-            </ul>
-            <div class="clear"></div>
-          </div>
 
-        </div>
-        
-        <div class="horizontal_line">
-          <div class="line_left"></div>
-          <div class="left_circle"></div>
-          <div class="central_circle"></div>
-          <div class="right_circle"></div>
-          <div class="line_right"></div>
-        </div>
+          {% for linkedinlink in content_left_side_social_linkedin %}
+          <li><a class="linkedin" href="{{ linkedinlink }}"><span class="entypo-linkedin-circled"></span><span
+                class="invisible">LinkedIn</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
 
-        <div class="last block">
-          <h2>{{ content_main_last_topic }}</h2>
-          {% for item5 in content_main_last_paragraphs %}
-            <p>item5</p>
+    </div>
+    <!-- PROFILE CONTENT -->
+    <div id="content_container">
+
+      <div class="block">
+        <h1>{{ content_main_top_first_topic }}</h1>
+        <blockquote class="profile_quote">
+          {% for profilebody_item in content_main_top_first_body_list %}
+          <p style="color: black;">"There is no end to education. It is not that you read a book, pass an examination,
+            and finish with education. The whole of life, from the moment you are born to the moment you die, is a
+            process of learning."</p>
+          {% endfor %}
+          <span class="entypo-quote"></span>
+        </blockquote>
+      </div>
+
+      <div class="block">
+        <h2>{{ content_main_mid_first_topic }}</h2>
+        {% for profilebody_mid_item in content_main_mid_first_body_list %}
+        <p>{{ profilebody_mid_item }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="horizontal_line">
+        <div class="line_left"></div>
+        <div class="left_circle"></div>
+        <div class="central_circle"></div>
+        <div class="right_circle"></div>
+        <div class="line_right"></div>
+      </div>
+
+      <div class="block">
+
+        <h2>{{ content_main_mid_last_topic }}</h2>
+        {% for item2 in content_main_mid_last_paragraph_top %}
+        <p>{{ item2 }}</p>
+        {% endfor %}
+
+        <div class="philosophy_content">
+          {% for item3 in content_main_mid_last_paragraph_left %}
+          <p>{{ item3 }}</p>
           {% endfor %}
           <ul>
-            {% for item6 in content_main_last_unordered_list %}
-              <li>{{ item6 }}</li>
+            {% for item3 in content_main_mid_last_points_right %}
+            <li>{{ item3 }}</li>
             {% endfor %}
-        </ul>
+          </ul>
+          <div class="clear"></div>
         </div>
+
       </div>
-      <div class="clear"></div>
 
-      <div id="footer">
-        {% for item7 in content_footer %}
-          <p class="footer_name">Javier Latorre CV 2015</p>
+      <div class="horizontal_line">
+        <div class="line_left"></div>
+        <div class="left_circle"></div>
+        <div class="central_circle"></div>
+        <div class="right_circle"></div>
+        <div class="line_right"></div>
+      </div>
+
+      <div class="last block">
+        <h2>{{ content_main_last_topic }}</h2>
+        {% for item5 in content_main_last_paragraphs %}
+        <p>item5</p>
         {% endfor %}
-        </div>
+        <ul>
+          {% for item6 in content_main_last_unordered_list %}
+          <li>{{ item6 }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
 
-		</div>
+    <div id="footer">
+      {% for item7 in content_footer %}
+      <p class="footer_name">Javier Latorre CV 2015</p>
+      {% endfor %}
+    </div>
+
+  </div>
 
 </body>
+
 </html>
