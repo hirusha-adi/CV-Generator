@@ -102,19 +102,25 @@
 
       </div>
       <!-- PROFILE CONTENT -->
-      <div id="content_container">				
+      <div id="content_container">
+
         <div class="block">
-          <h1>Profile</h1>
+          <h1>{{ content_main_top_first_topic }}</h1>
           <blockquote class="profile_quote">
-            <p style="color: black;">"There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."</p>
-            <p>Jiddu Krishnamurti.</p>
+            {% for profilebody_item in  content_main_top_first_body_list %}
+              <p style="color: black;">"There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."</p>
+            {% endfor %}
             <span class="entypo-quote"></span>
           </blockquote>
         </div>
+
         <div class="block">
-          <h2>A few words about me</h2>
-          <p>Until now, in my life, I change from active moments with a lot of variety, challenges and improvisations, to moments of tranquility and stability, being difficult to stay in a place during a long time. I consider myself a tolerant and respectful person with open mind and quite honest. I really like to listen people stories and backgrounds and their different experiences around the world.</p>				
-        </div>
+          <h2>{{ content_main_mid_first_topic }}</h2>
+          {% for profilebody_mid_item in  content_main_mid_first_body_list %}
+            <p>{{ profilebody_mid_item }}</p>				
+          {% endfor %}
+          </div>
+
         <div class="horizontal_line">
           <div class="line_left"></div>
           <div class="left_circle"></div>

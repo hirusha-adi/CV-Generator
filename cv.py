@@ -33,6 +33,10 @@ def index():
                            content_left_side_social_facebook = jsondata["CONTENT"]["left_side"]["social"]["facebook"],
                            content_left_side_social_twitter = jsondata["CONTENT"]["left_side"]["social"]["twitter"],
                            content_left_side_social_linkedin = jsondata["CONTENT"]["left_side"]["social"]["linkedin"],
+                           content_main_top_first_topic = jsondata["CONTENT"]["main"]["top_first"]["topic"],
+                           content_main_top_first_body_list = jsondata["CONTENT"]["main"]["top_first"]["body"],
+                           content_main_mid_first_topic = jsondata["CONTENT"]["main"]["mid_first"]["topic"],
+                           content_main_mid_first_body_list = jsondata["CONTENT"]["main"]["mid_first"]["body"],
                            )
 
 
