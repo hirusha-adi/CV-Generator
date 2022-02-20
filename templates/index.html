@@ -65,9 +65,9 @@
           {% for k2, v2 in content_left_side_contact_details_fields_dict_list.items() %}
             {% if k2 == "Address:" %}
               <p class="purple">{{ k2 }}</p>
-              {% for oneline in str(v2).split("\n") %}
+              {% for oneline in v2.split("\n") %}
                 <p>{{ oneline }}</p>
-              {% enfor %}
+              {% endfor %}
             {% else %}
               <p class="purple">{{ k2 }}</p>
               <p>{{ v2 }}</p>
@@ -75,18 +75,28 @@
           {% endfor %}
         </div>
 
-        <a href="mailto:jlalovi@gmail.com" class="send_message_button">
+        {% if content_left_side_email_button_show == True %}
+        <a href="mailto:{{ content_left_side_email_button_email }}" class="send_message_button">
           <span class="cut1"></span>
           <span class="cut2"></span>
-          <span class="content">Send me a message <span class="fontawesome-double-angle-right"></span></span>
+          <span class="content">{{ content_left_side_email_button_button_text }} <span class="fontawesome-double-angle-right"></span></span>
         </a>
+        {% endif %}
 
         <div class="get_social_content">
-          <h2>Get social</h2>
+          <h2>{{ content_left_side_social_title }}</h2>
           <ul class="social_icons horizontal_list">
-            <li><a class="facebook" href="https://www.facebook.com/jlalovi"><span class="entypo-facebook-circled"></span><span class="invisible">Facebook</span></a></li>
-            <li><a class="twitter" href="https://twitter.com/jlalovi"><span class="entypo-twitter-circled"></span><span class="invisible">Twitter</span></a></li>
-            <li><a class="linkedin" href="https://www.linkedin.com/in/jlalovi/en"><span class="entypo-linkedin-circled"></span><span class="invisible">LinkedIn</span></a></li>
+            {% for fblink in content_left_side_social_facebook %}
+              <li><a class="facebook" href="{{ fblink }}"><span class="entypo-facebook-circled"></span><span class="invisible">Facebook</span></a></li>
+            {% endfor %}
+            
+            {% for twitterlink in content_left_side_social_twitter %}
+              <li><a class="twitter" href="{{ twitterlink }}"><span class="entypo-twitter-circled"></span><span class="invisible">Twitter</span></a></li>
+            {% endfor %}
+
+            {% for linkedinlink in content_left_side_social_linkedin %}
+              <li><a class="linkedin" href="{{ linkedinlink }}"><span class="entypo-linkedin-circled"></span><span class="invisible">LinkedIn</span></a></li>
+            {% endfor %}
           </ul>
         </div>
 

@@ -26,7 +26,13 @@ def index():
                            content_left_side_subtopic = jsondata["CONTENT"]["left_side"]["subtopic"],
                            content_left_side_contact_details_topic = jsondata["CONTENT"]["left_side"]["contact_details"]["topic"],
                            content_left_side_contact_details_fields_dict_list = jsondata["CONTENT"]["left_side"]["contact_details"]["fields"],
-                           content_left_side_contact_details_fields_dict_list = jsondata["CONTENT"]["left_side"]["contact_details"]["fields"]
+                           content_left_side_email_button_show = jsondata["CONTENT"]["left_side"]["email_button"]["show"],
+                           content_left_side_email_button_email = jsondata["CONTENT"]["left_side"]["email_button"]["email"],
+                           content_left_side_email_button_button_text = jsondata["CONTENT"]["left_side"]["email_button"]["button_text"],
+                           content_left_side_social_title = jsondata["CONTENT"]["left_side"]["social"]["title"],
+                           content_left_side_social_facebook = jsondata["CONTENT"]["left_side"]["social"]["facebook"],
+                           content_left_side_social_twitter = jsondata["CONTENT"]["left_side"]["social"]["twitter"],
+                           content_left_side_social_linkedin = jsondata["CONTENT"]["left_side"]["social"]["linkedin"],
                            )
 
 

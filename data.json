@@ -23,8 +23,26 @@
                 "fields": {
                     "Phone:": "+34 123 456 789",
                     "Email:": "jlalovi@gmail.com",
-                    "Address:": "Someplace, Kusal Mawatha, Akusal Gedara"
+                    "Address:": "Someplace,\nKusal Mawatha,\nAkusal Gedara"
                 }
+            },
+            "email_button": {
+                "show": true,
+                "email": "hirusha@hirusha.xyz",
+                "button_text": "Send me a message"
+            },
+
+            "social": {
+                "title": "Get social",
+                "facebook": [
+                    "https://web.facebook.com/hirusha.adikari01/"
+                ],
+                "twitter": [
+                    "https://twitter.com/hirusha_adikari/"
+                ],
+                "linkedin": [
+                    "https://linkedin.com/"
+                ]
             }
         }
     }
