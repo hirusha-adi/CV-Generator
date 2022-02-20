@@ -24,6 +24,7 @@ def index():
                            content_topics_dict_list = jsondata["CONTENT"]["topics"],
                            content_left_side_start = jsondata["CONTENT"]["left_side"]["start"],
                            content_left_side_subtopic = jsondata["CONTENT"]["left_side"]["subtopic"],
+                           content_left_side_face_image = jsondata["CONTENT"]["left_side"]["face_image"],
                            content_left_side_contact_details_topic = jsondata["CONTENT"]["left_side"]["contact_details"]["topic"],
                            content_left_side_contact_details_fields_dict_list = jsondata["CONTENT"]["left_side"]["contact_details"]["fields"],
                            content_left_side_email_button_show = jsondata["CONTENT"]["left_side"]["email_button"]["show"],
@@ -50,3 +51,4 @@ def index():
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=3338, debug=False)
+    

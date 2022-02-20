@@ -220,13 +220,13 @@ ul {
 		font-style: italic;
 		line-height: 45px;
 		padding: 16px 17px;
-		background: #353638;
+		background: #e8e8e8;
 	}
 		.download_print_buttons a:hover {
-			background: #020609;
+			background: #ffffff;
 		}
 		.download_print_buttons .icon {
-			color: #02070a;
+			color: #ffffff;
 			padding-right: 6px;
 			font-style: normal;
 			font-size: 18px;
@@ -276,7 +276,6 @@ ul {
 		width: 210px;
 		height: 240px;
 		margin:10px;
-		background: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/86033/profile/profile-512_3.jpg) 100% /210px no-repeat;
 	}
 
 .hello_content,
