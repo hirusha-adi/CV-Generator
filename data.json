@@ -1,0 +1,31 @@
+{
+    "DOCUMENT": {
+        "title": "A SAMPLE CV"
+    },
+    "CONTENT": {
+        "title": {
+            "first_name": "David",
+            "last_name": "Robin",
+            "subtopic": "Frontend Web Developer"
+        },
+
+        "topics": {
+            "Google": "https://google.com",
+            "Youtube": "https://youtube.com",
+            "Github": "https://github.com"
+        },
+
+        "left_side": {
+            "start": "Hello!",
+            "subtopic": "I'm passionate about technology and human behavior, hardworker and a fast-learner with experience in around 10 different countries studying, working and volunteering.",
+            "contact_details": {
+                "topic": "Contact details",
+                "fields": {
+                    "Phone:": "+34 123 456 789",
+                    "Email:": "jlalovi@gmail.com",
+                    "Address:": "Someplace, Kusal Mawatha, Akusal Gedara"
+                }
+            }
+        }
+    }
+}
