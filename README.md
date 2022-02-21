@@ -1,6 +1,9 @@
-# CV-Generator
-generate cv
+# CV Website Generator
 
 
-# frontend from:
-https://codepen.io/jlalovi/pen/NPeBqZ
+
+
+
+# Credits
+
+<https://codepen.io/jlalovi/pen/NPeBqZ>
