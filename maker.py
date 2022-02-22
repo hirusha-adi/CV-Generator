@@ -198,5 +198,8 @@ def main():
     data["CONTENT"]["footer"] = input(
         "Footer: ")
 
+    updateJson(data=data)
 
-main()
+
+if __name__ == "__main__":
+    main()
