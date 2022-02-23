@@ -4,7 +4,7 @@ import json
 
 
 if not("data.json" in os.listdir(os.getcwd())):
-    sys.exit("[!] Unable to find 'data.json' in current working direcitroy")
+    sys.exit("[!] Unable to find 'data.json' in current working direcitroy\n[!] Rename `data.json.empty` to `data.json` and try again")
 filename = os.path.join(os.getcwd(), "data.json")
 
 
