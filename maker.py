@@ -3,9 +3,9 @@ import sys
 import json
 
 
-if not("data2.json" in os.listdir(os.getcwd())):
+if not("data.json" in os.listdir(os.getcwd())):
     sys.exit("[!] Unable to find 'data.json' in current working direcitroy")
-filename = os.path.join(os.getcwd(), "data2.json")
+filename = os.path.join(os.getcwd(), "data.json")
 
 
 def updateJson(data):
