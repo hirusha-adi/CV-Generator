@@ -24,6 +24,11 @@ python3 maker.py
 nano data.json
 ```
 
+- After you have filled `data.json` with the required data: You can start the web server
+```
+python3 cv.py
+```
+
 # Credits
 
 <https://codepen.io/jlalovi/pen/NPeBqZ>
