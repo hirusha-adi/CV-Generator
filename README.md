@@ -31,7 +31,3 @@ nano data.json
 ```
 python3 cv.py
 ```
-
-# Credits
-
-<https://codepen.io/jlalovi/pen/NPeBqZ>
