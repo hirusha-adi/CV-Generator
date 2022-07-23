@@ -1,5 +1,8 @@
 # CV Website Generator
 
+
+![image](https://user-images.githubusercontent.com/36286877/180595065-54762ddb-a0c8-4099-bcde-4def80b35e67.png)
+
 Generate a CV Website Easily
 
 ## Usage
